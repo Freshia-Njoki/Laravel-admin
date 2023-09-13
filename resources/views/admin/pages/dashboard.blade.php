@@ -3,11 +3,13 @@
 @section('content')
 <!-- Page Wrapper -->
 <div id="wrapper">
+    @include('admin.layouts.sidebar')
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
         <!-- Main Content -->
         <div id="content">
+            @include('admin.layouts.navbar')
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
@@ -324,4 +326,14 @@
     <!-- End Content Wrapper -->
 </div>
 <!-- End Page Wrapper -->
+@endsection
+
+@section('page_scripts')
+<!-- Page level plugins -->
+<script src="{{asset('admin/vendor/chart.js/Chart.min.js')}}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{{asset('admin/js/demo/chart-area-demo.js')}}"></script>
+<script src="{{asset('admin/js/demo/chart-pie-demo.js')}}"></script>
+
 @endsection
