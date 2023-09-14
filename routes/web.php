@@ -57,6 +57,16 @@ Route::namespace('App\Http\Controllers')->group(function (){
 Route::namespace('App\Http\Controllers\Admin')->prefix('admin')->as('admin')->group(function(){
     Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
     Route::get('/users', 'AdminController@users')->name('users');
+    Route::resource('/blog/category', 'BlogCategoryController')->names([
+        'index' => 'category.list',
+        'create' => 'category.create',
+        'store' => 'category.store',
+        'show' => 'category.show',
+        'edit' => 'category.edit',
+        'update' => 'category.update',
+        'destroy' => 'category.destroy'
+
+    ]);
 });
 
 
